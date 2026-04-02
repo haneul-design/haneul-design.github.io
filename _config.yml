@@ -20,7 +20,7 @@ rtl                      : # true, false (default) # turns direction of the page
 title                    : "HYCU 웹디자인 과제"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "KimHaneul"
+name                     : "김하늘"
 description              : "뉴미디어디자인학과"
 url                      : "https://haneul-design.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
