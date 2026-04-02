@@ -21,7 +21,7 @@ title                    : "HYCU 웹디자인 과제"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "김하늘"
-description              : "뉴미디어디자인학"
+description              : "뉴미디어디자인학과"
 url                      : "https://haneul-design.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
