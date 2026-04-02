@@ -116,7 +116,7 @@ analytics:
 author:
   name             : "김하늘"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "뉴미디어디자인학"
   location         : "Somewhere"
   email            :
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
