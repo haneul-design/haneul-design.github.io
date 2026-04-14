@@ -1,191 +1,162 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>애니메이션 소개 - 엘리멘탈</title>
-    <style>
-        :root {
-            --fire-color: #ff4d00;
-            --water-color: #00a2ff;
-            --bg-color: #f4f7f6;
-            --text-dark: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELEMENTAL</title>
 
-        body {
-            font-family: 'Pretendard', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-        }
+<style>
+:root {
+    --fire-color: #ff4d00;
+    --water-color: #00a2ff;
+    --bg-color: #f4f7f6;
+    --text-dark: #333;
+}
 
-        header {
-            background: linear-gradient(90deg, var(--fire-color), var(--water-color));
-            color: white;
-            text-align: center;
-            padding: 3rem 1rem;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* 폰트 문제 방지 */
+    background: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+header {
+    background: linear-gradient(90deg, var(--fire-color), var(--water-color));
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
 
-        .img-placeholder {
-            background-color: #ddd;
-            width: 100%;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 2px dashed #bbb;
-        }
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
 
-        section {
-            background: white;
-            padding: 2rem;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
 
-        h2 {
-            border-left: 5px solid var(--fire-color);
-            padding-left: 10px;
-            color: #222;
-        }
+h2 {
+    border-left: 5px solid var(--fire-color);
+    padding-left: 10px;
+}
 
-        .char-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
 
-        .char-card {
-            text-align: center;
-            padding: 15px;
-            border: 1px solid #eee;
-            border-radius: 10px;
-        }
+.card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
 
-        .char-card img {
-            width: 150px;
-            height: 150px;
-            background-color: #eee;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
 
-        .relationship-map {
-            background: #fff;
-            padding: 20px;
-            text-align: center;
-            border: 2px solid #e0e0e0;
-            border-radius: 12px;
-        }
+.fire { background: var(--fire-color); }
+.water { background: var(--water-color); }
 
-        .tag {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            color: white;
-            margin-bottom: 10px;
-        }
+.placeholder {
+    width: 100%;
+    height: 200px;
+    background: #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    margin-bottom: 15px;
+}
 
-        .tag-fire { background-color: var(--fire-color); }
-        .tag-water { background-color: var(--water-color); }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            color: #888;
-        }
-    </style>
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+}
+</style>
 </head>
+
 <body>
 
 <header>
     <h1>ELEMENTAL</h1>
-    <p>세상에 없던 '반대'의 만남, 불과 물의 마법 같은 이야기</p>
+    <p>세상에 없던 '반대'의 만남</p>
 </header>
 
 <div class="container">
 
-    <div class="img-placeholder">
-        <p>[메인 포스터 이미지 들어갈 곳]</p>
+<section>
+    <div class="placeholder">메인 이미지 영역</div>
+    <h2>📌 영화 소개</h2>
+    <p>
+        디즈니·픽사의 애니메이션 <b>&lt;엘리멘탈&gt;</b>은
+        불과 물이라는 상반된 존재가 만나 서로를 이해해가는 이야기입니다.
+    </p>
+</section>
+
+<section>
+    <h2>🧑‍🤝‍🧑 캐릭터</h2>
+    <div class="grid">
+        
+        <div class="card">
+            <div class="tag fire">FIRE</div>
+            <div class="placeholder">앰버 이미지</div>
+            <h3>앰버</h3>
+            <p>열정적이고 솔직한 불의 정령</p>
         </div>
 
-    <section id="intro">
-        <h2>영화 소개</h2>
-        <p>디즈니·픽사의 영화 <b><엘리멘탈></b>은 불, 물, 공기, 흙 4원소가 살고 있는 '엘리멘트 시티'를 배경으로 합니다. 
-        불처럼 열정 넘치는 '앰버'가 어느 날 우연히 무심코 흐르는 물처럼 사는 '웨이드'를 만나면서, 
-        자신이 믿어왔던 세상을 바꾸고 진정한 나를 찾아가는 과정을 그린 애니메이션입니다.</p>
-    </section>
-
-    <section id="characters">
-        <h2>주인공</h2>
-        <div class="char-grid">
-            <div class="char-card">
-                <div class="tag tag-fire">FIRE</div>
-                <div style="width:100px; height:100px; background:#eee; margin:0 auto 10px; border-radius:50%; line-height:100px;">[사진]</div>
-                <h3>앰버 루멘</h3>
-                <p>불의 구역에서 가족과 함께 가게를 운영하는 열정적이고 똑똑한 불의 정령. 화가 나면 불길이 치솟지만 마음은 따뜻하다.</p>
-            </div>
-            <div class="char-card">
-                <div class="tag tag-water">WATER</div>
-                <div style="width:100px; height:100px; background:#eee; margin:0 auto 10px; border-radius:50%; line-height:100px;">[사진]</div>
-                <h3>웨이드 리플</h3>
-                <p>감수성이 풍부하고 눈물이 많은 물의 정령. 모든 것을 포용하는 성격으로 앰버에게 새로운 세상을 보여준다.</p>
-            </div>
+        <div class="card">
+            <div class="tag water">WATER</div>
+            <div class="placeholder">웨이드 이미지</div>
+            <h3>웨이드</h3>
+            <p>감수성이 풍부한 물의 정령</p>
         </div>
-    </section>
 
-    <section id="relationship">
-        <h2>인물 관계도</h2>
-        <div class="relationship-map">
-            <p><b>앰버 ❤️ 웨이드</b><br>(상극이지만 서로를 보완하는 연인)</p>
-            <hr>
-            <p><b>앰버 & 버니(아빠)</b><br>부녀지간: 가업을 물려받길 바라는 기대와 부담</p>
-            <p><b>웨이드 & 게일(상사)</b><br>공기 정령 게일의 밑에서 일하는 시청 조사관</p>
-            <div style="margin-top:20px; color:#666; font-style:italic;">
-                [이곳에 관계도 그래픽 이미지를 삽입하면 좋습니다]
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
-    <section id="plot">
-        <h2>줄거리</h2>
-        <p>"원소끼리는 섞이면 안 돼!"라는 엄격한 규칙이 있는 엘리멘트 시티.</p>
-        <p>아버지의 가게를 물려받기 위해 노력하던 <b>앰버</b>는 실수로 지하수 파이프를 터뜨리게 되고, 
-        그곳에서 시청 조사관인 <b>웨이드</b>를 만나게 됩니다. 앰버는 가게를 폐업 위기에서 구하기 위해 웨이드와 함께 모험을 시작하고, 
-        그 과정에서 서로의 다름을 인정하며 특별한 감정을 느끼게 되는데...</p>
-        <div class="img-placeholder" style="height:250px;">
-            <p>[엘리멘트 시티 배경 사진 들어갈 곳]</p>
-        </div>
-    </section>
+<section>
+    <h2>❤️ 관계</h2>
+    <p><b>앰버 ❤️ 웨이드</b><br>서로를 변화시키는 관계</p>
+</section>
 
-    <section id="extra">
-        <h2>감상 포인트 (TMI)</h2>
-        <ul>
-            <li><b>시각적 아름다움:</b> 불의 질감과 물의 투명함을 표현한 픽사의 기술력</li>
-            <li><b>OST:</b> 라우브(Lauv)가 부른 'Steal The Show'는 필수 감상</li>
-            <li><b>이민자 서사:</b> 감독 피터 손의 실제 경험이 녹아있는 가족과 정체성 이야기</li>
-        </ul>
-    </section>
+<section>
+    <h2>📖 줄거리</h2>
+    <p>
+        서로 섞일 수 없다는 규칙 속에서 살아가던 두 존재가
+        함께 문제를 해결하며 점점 가까워진다.
+    </p>
+</section>
+
+<section>
+    <h2>🎨 감상 포인트</h2>
+    <ul>
+        <li>🔥 불과 물의 대비</li>
+        <li>🎵 감성적인 OST</li>
+        <li>🌍 성장과 이해의 이야기</li>
+    </ul>
+</section>
 
 </div>
 
 <footer>
-    <p>&copy; 2024 Elemental Fan Page | 이미지 출처: Disney/Pixar</p>
+    © Elemental Project
 </footer>
 
 </body>
