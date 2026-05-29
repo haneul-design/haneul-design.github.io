@@ -1,0 +1,432 @@
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>김하늘 Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Pretendard', sans-serif;
+    background:#F6F2ED;
+    color:#4A403A;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+section{
+    width:100%;
+    padding:120px 10%;
+}
+
+.container{
+    max-width:1920px;
+    margin:0 auto;
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+    backdrop-filter: blur(10px);
+    background:rgba(246,242,237,0.8);
+    padding:24px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.menu{
+    display:flex;
+    gap:40px;
+}
+
+.menu a{
+    font-size:15px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#A94442;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:80px;
+    line-height:1.1;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.hero-text p{
+    font-size:20px;
+    color:#7A7068;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.hero-btn{
+    display:inline-block;
+    padding:14px 32px;
+    border-radius:100px;
+    background:#A94442;
+    color:white;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+}
+
+.hero-image{
+    flex:1;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:30px;
+    object-fit:cover;
+}
+
+/* TITLE */
+.title{
+    margin-bottom:60px;
+}
+
+.title h2{
+    font-size:52px;
+    margin-bottom:12px;
+}
+
+.title p{
+    color:#7A7068;
+}
+
+/* ABOUT */
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.about-card{
+    background:white;
+    padding:40px;
+    border-radius:28px;
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
+}
+
+/* SKILLS */
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.skill{
+    background:white;
+    padding:20px 30px;
+    border-radius:100px;
+    box-shadow:0 10px 20px rgba(0,0,0,.04);
+    transition:.3s;
+}
+
+.skill:hover{
+    transform:translateY(-5px);
+}
+
+/* PROJECT */
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.project-card{
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+    transition:.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+}
+
+.project-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:30px;
+}
+
+.project-content h3{
+    margin-bottom:12px;
+    font-size:24px;
+}
+
+.project-content p{
+    color:#7A7068;
+    line-height:1.7;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+
+.contact h2{
+    font-size:56px;
+    margin-bottom:20px;
+}
+
+.contact p{
+    color:#7A7068;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    color:#7A7068;
+}
+
+/* ANIMATION */
+.fade{
+    opacity:0;
+    transform:translateY(30px);
+    transition:1s ease;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:1000px){
+
+.hero{
+    flex-direction:column;
+    padding-top:120px;
+}
+
+.hero-text h1{
+    font-size:52px;
+}
+
+.project-grid{
+    grid-template-columns:1fr;
+}
+
+.about-grid{
+    grid-template-columns:1fr;
+}
+
+.menu{
+    gap:20px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">HANEUL KIM</div>
+
+    <ul class="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero container fade">
+    <div class="hero-text">
+        <h1>Minimal<br>Portfolio</h1>
+
+        <p>
+            안녕하세요. 사용자 경험과 감성을 연결하는 디자인을 고민하는
+            김하늘입니다.
+        </p>
+
+        <a href="#projects" class="hero-btn">
+            View Projects
+        </a>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop" alt="">
+    </div>
+</section>
+
+<section id="about" class="container fade">
+
+    <div class="title">
+        <h2>About Me</h2>
+        <p>디자인과 사용자 경험을 연결하는 사람</p>
+    </div>
+
+    <div class="about-grid">
+
+        <div class="about-card">
+            <h3>Profile</h3>
+            <br>
+            <p>
+                뉴미디어디자인을 기반으로
+                사용자 중심의 디자인과
+                감성적인 비주얼을 고민합니다.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <h3>Education & Experience</h3>
+            <br>
+            <p>
+                Hanyang Cyber University<br>
+                New Media Design<br><br>
+
+                E-Land Kids Online Team AMD
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="skills" class="container fade">
+
+    <div class="title">
+        <h2>Skills</h2>
+        <p>사용 가능한 디자인 툴</p>
+    </div>
+
+    <div class="skills">
+        <div class="skill">Photoshop</div>
+        <div class="skill">Illustrator</div>
+        <div class="skill">Figma</div>
+        <div class="skill">HTML / CSS</div>
+        <div class="skill">Premiere Pro</div>
+    </div>
+
+</section>
+
+<section id="projects" class="container fade">
+
+    <div class="title">
+        <h2>Projects</h2>
+        <p>작업 프로젝트</p>
+    </div>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+            <div class="project-content">
+                <h3>모바일 청첩장</h3>
+                <p>감성적인 모바일 청첩장 UI 디자인 프로젝트</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop">
+            <div class="project-content">
+                <h3>사이렌오더 UX 개선</h3>
+                <p>대기시간 예측 기반 UX 개선 프로젝트</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+            <div class="project-content">
+                <h3>찬란한 추락</h3>
+                <p>감정과 상징을 표현한 포스터 디자인</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
+            <div class="project-content">
+                <h3>Portfolio Website</h3>
+                <p>원페이지 포트폴리오 웹사이트 제작</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact container fade">
+
+    <h2>Let's Connect</h2>
+    <p>Email : your@email.com</p>
+    <p>Instagram : @your_id</p>
+
+</section>
+
+<footer>
+    © 2026 HANEUL KIM PORTFOLIO
+</footer> 
+
+<script>
+const fadeElements = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+});
+
+fadeElements.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
+```
+portfolio.html
